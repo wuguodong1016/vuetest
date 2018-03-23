@@ -1,21 +1,20 @@
 # my-first-vue-project
 
-> this is my fist
+> 这是一个vue的练习
+> 做了一个页面，实现自动添加list的功能
 
-## Build Setup
+#用到的技术点
 
-``` bash
-# install dependencies
-npm install
+	1. v-for 做一个list 集合
+	2. v-bind 指令  对class的控制显示
+	3. v-on:click 点击事件（状态互换）
+	4. v-model 双向绑定，输入的值放入节点里面
+	5. 监听 watch
+	6. localStrore 浏览器的本地存储
+	7. 父子组件的传递参数，组件之间的通信
 
-# serve with hot reload at localhost:8080
-npm run dev
+# 效果图
 
-# build for production with minification
-npm run build
+![ad](./pricture/addlist.jpg)
+![ad](./pricture/addlist2.jpg)
 
-# build for production and view the bundle analyzer report
-npm run build --report
-```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).

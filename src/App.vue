@@ -7,18 +7,27 @@
 				{{item.val}}
 			</li>
 		</ul>
+		<p>child tells me : {{childWords}}</p>
+		<Word info='something interesting'
+			v-on:child-tell-me = "listenBoy"/>
 	</div>
 </template>
 
+
 <script>
+	import Store from './store'
+	import Word from './components/word'
 	export default {
 		data() {
 			return {
 				title: "这是一个小测试",
-				items: [
-				],
-				newItem:''
+				items: Store.fetch(),
+				newItem:'',
+				childWords:''
 			}
+		},
+		components: {
+			Word
 		},
 		methods: {
 			toggleFinshed: function(item) {
@@ -29,7 +38,18 @@
 					val: newItem,
 					isfinshed: false
 				});
-				this.newItem = ''
+				this.newItem = '';
+			},
+			listenBoy : function(msg){
+				this.childWords = msg;
+			}
+		},
+		watch: {
+			items:{
+				handler(items){
+					Store.save(items);
+				},
+				deep:true
 			}
 		}
 	}

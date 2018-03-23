@@ -16,5 +16,9 @@
 # 效果图
 
 ![ad](https://github.com/wuguodong1016/vuetest/raw/master/picture/addlist.jpg)
+
+-----
+
 ![ad](https://github.com/wuguodong1016/vuetest/blob/master/picture/addlist2.jpg)
+
 
